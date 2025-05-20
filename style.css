@@ -298,68 +298,88 @@ th, td {
 }
 
 .sobre-jogo {
-    background-color: #ffffff;
-    padding: 30px;
-    margin-top: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    padding: 40px 20px;
+    background-color: #f0fdf4;
+    border-radius: 20px;
+    margin-bottom: 40px;
 }
 
-.sobre-jogo h2,
-.sobre-jogo h3 {
-    margin-bottom: 10px;
+.sobre-jogo h2 {
+    font-size: 2em;
+    color: #2e7d32;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.descricao-jogo {
+.sobre-jogo .descricao-jogo {
     font-size: 1.1em;
-    color: #444;
-    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #4e4e4e;
+    text-align: center;
 }
 
-.grupo-equipe .categoria {
-    margin-bottom: 30px;
+.sobre-jogo h3 {
+    font-size: 1.6em;
+    color: #388e3c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.grupo-equipe {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .categoria h4 {
-    color: #388e3c;
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin-bottom: 15px;
-    border-left: 4px solid #81c784;
-    padding-left: 10px;
+    color: #2e7d32;
+    text-align: center;
 }
 
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center;
+    gap: 25px;
 }
 
 .card-pessoa {
-    background-color: #f1f8e9;
-    border-radius: 10px;
-    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 160px;
     text-align: center;
-    width: 150px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-pessoa:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
 }
 
 .card-pessoa img {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
+    border: 3px solid #a5d6a7;
     margin-bottom: 10px;
-    border: 2px solid #c8e6c9;
+    transition: transform 0.3s ease;
+}
+
+.card-pessoa:hover img {
+    transform: scale(1.05);
 }
 
 .card-pessoa p {
-    font-weight: 500;
+    font-weight: bold;
     color: #2e7d32;
+    font-size: 1em;
 }
 
 .secao {
@@ -525,4 +545,77 @@ h2 {
     color: #333;
     line-height: 1.6;
     margin-bottom: 15px
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .opinioes {
+        flex-direction: column;
+    }
+
+    .movimento-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards {
+        justify-content: center;
+    }
+
+    .card-pessoa {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .cenario-galeria, .galeria-animais {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .animal {
+        max-width: 90%;
+    }
+
+    ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul li img {
+        width: 100%;
+        height: auto;
+    }
+
+    .minigames, .minigames-detalhes, .movimento, .recompensas, .sobre-jogo {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .pessoa {
+        display: block;
+        margin: 0 auto 15px;
+    }
+
+    .pessoa img {
+        width: 80px;
+    }
 }
